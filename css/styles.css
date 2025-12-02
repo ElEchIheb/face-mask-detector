@@ -1,16 +1,111 @@
-/* Changing body color to dark grey and text color to gainsboro(version of white) */
+/* ===== Body & General ===== */
 body {
-    color: gainsboro;
-    background-color: #333;
+    background-color: #1e1e2f; /* Dark navy for modern look */
+    color: #e0e0e0; /* Light text for contrast */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
 }
 
-/* Changing sideline color to light gray and text color to black */
+/* ===== Sidebar ===== */
 .sidebar .sidebar-content {
-    background-color: #c1c1c1;
-    background-image: none;
-    color: black;
+    background-color: #2a2a3d;
+    color: #f0f0f0;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 3px 3px 15px rgba(0,0,0,0.4);
+    font-size: 16px;
 }
 
-/* Removing Main Menubar and Footer */
-#MainMenu {visibility: hidden;}
-footer {visibility: hidden;}
+.sidebar .sidebar-content h1,
+.sidebar .sidebar-content h2,
+.sidebar .sidebar-content h3 {
+    color: #ffcc00; /* Accent color for headers */
+}
+
+/* Sidebar links hover */
+.sidebar .sidebar-content a {
+    color: #e0e0e0;
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.sidebar .sidebar-content a:hover {
+    color: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* ===== Main Page ===== */
+[data-testid="stAppViewContainer"] {
+    background-color: #1e1e2f;
+    padding: 30px;
+}
+
+/* ===== Titles & Headers ===== */
+h1, h2, h3 {
+    color: #ffcc00;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 25px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.7);
+}
+
+/* ===== Buttons ===== */
+.stButton>button {
+    background-color: #ffcc00;
+    color: #1e1e2f;
+    font-weight: bold;
+    border-radius: 10px;
+    padding: 10px 25px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.stButton>button:hover {
+    background-color: #ffaa00;
+    transform: scale(1.05);
+}
+
+/* ===== File Uploader ===== */
+.stFileUploader>div {
+    border: 2px dashed #ffcc00;
+    border-radius: 15px;
+    padding: 20px;
+    transition: border-color 0.3s ease;
+}
+
+.stFileUploader>div:hover {
+    border-color: #ffaa00;
+}
+
+/* ===== Image Display ===== */
+.stImage > img {
+    border-radius: 15px;
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.5);
+    margin: 20px 0;
+    transition: transform 0.2s ease;
+}
+
+.stImage > img:hover {
+    transform: scale(1.02);
+}
+
+/* ===== Hide default Streamlit elements ===== */
+#MainMenu, footer {
+    visibility: hidden;
+}
+
+/* ===== Checkbox Styling ===== */
+.stCheckbox>div>label {
+    color: #e0e0e0;
+    font-weight: bold;
+}
+.stCheckbox>div>label:hover {
+    color: #ffcc00;
+}
+
+/* ===== Optional: Horizontal Divider Styling ===== */
+hr {
+    border: 0;
+    height: 2px;
+    background: linear-gradient(to right, #ffcc00, #ffaa00);
+    margin: 25px 0;
+}
