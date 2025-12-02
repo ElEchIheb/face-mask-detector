@@ -58,7 +58,7 @@ python-dateutil==2.9.0.post0
 pytz==2025.2
 pywin32==311
 PyYAML==6.0.3
-referencing=0.31.0
+referencing==0.31.0
 requests==2.32.5
 requests-oauthlib==2.0.0
 rich==14.2.0
